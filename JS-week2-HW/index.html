@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Photo Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Photo Gallery</h1>
+  </header>
+
+  <main id="main">
+    <!-- Preview Box -->
+    <div id="image">
+      Hover over an image below to display here.
+    </div>
+
+    <!-- Thumbnail Gallery -->
+    <div class="gallery">
+      <img class="preview" 
+           alt="Serene lake during sunset" 
+           src="https://picsum.photos/id/1015/600/400" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()">
+
+      <img class="preview" 
+           alt="Mist-covered mountain peaks" 
+           src="https://picsum.photos/id/1018/600/400" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()">
+
+      <img class="preview" 
+           alt="Waterfall in green forest" 
+           src="https://picsum.photos/id/1039/600/400" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()">
+    </div>
+  </main>
+
+</body>
+</html>
