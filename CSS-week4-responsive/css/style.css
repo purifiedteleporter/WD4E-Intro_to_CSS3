@@ -1,4 +1,6 @@
-/* Base Mobile View (Mobile First - No Media Queries) */
+/* ===================================================
+   Mobile View (Default Base Styles - No Media Queries)
+   =================================================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,18 +13,19 @@ header {
   margin-bottom: 20px;
 }
 
-main {
+/* Parent container set to flex layout so wrapping works */
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
 }
 
-.gallery-item {
+/* Mobile: Divs take 100% width (1 item per row) */
+div {
   width: 100%;
   background-color: #ffffff;
-  border: 2px solid #333333;
-  border-radius: 8px;
+  border: 1px solid #cccccc;
+  margin-bottom: 15px;
   padding: 15px;
   box-sizing: border-box;
   text-align: center;
@@ -31,23 +34,31 @@ main {
 img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
 }
 
-/* Query #1: Tablet View (triggers at 772px) */
+
+/* ===================================================
+   Query #1: Tablet View (Triggers at 772px)
+   =================================================== */
 @media screen and (min-width: 772px) {
-  .gallery-item {
+  /* Divs take 45% width (2 items per row) */
+  div {
     width: 45%;
   }
 
+  /* Images restricted to maximum 30% of viewport height */
   img {
     max-height: 30vh;
   }
 }
 
-/* Query #2: Large Screen View (triggers at 998px) */
+
+/* ===================================================
+   Query #2: Large Screen View (Triggers at 998px)
+   =================================================== */
 @media screen and (min-width: 998px) {
-  .gallery-item {
+  /* Divs take 30% width (3 items per row) */
+  div {
     width: 30%;
   }
 }
