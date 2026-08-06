@@ -1,3 +1,4 @@
+/* Base Mobile View (Mobile First - No Media Queries) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -28,11 +29,12 @@ main {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 4px;
 }
 
+/* Query #1: Tablet View (triggers at 772px) */
 @media screen and (min-width: 772px) {
   .gallery-item {
     width: 45%;
@@ -43,6 +45,7 @@ img {
   }
 }
 
+/* Query #2: Large Screen View (triggers at 998px) */
 @media screen and (min-width: 998px) {
   .gallery-item {
     width: 30%;
